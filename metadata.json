@@ -1,0 +1,7 @@
+{
+    "uuid": "kaixo-mundua@aldatsa",
+    "name": "Kaixo mundua",
+    "description": "Cinnamon-eko applet-ak nola garatu ikasten hasi naiz.",
+    "icon": "kaixo-mundua",
+    "max-instances": "-1"
+}
