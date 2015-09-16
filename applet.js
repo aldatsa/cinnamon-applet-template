@@ -2,7 +2,13 @@
  * /usr/share/cinnamon/js/
  */
 const Applet = imports.ui.applet;
+
+// The UUID (Universally Unique IDentifier) of your applet.
+// Change this constant to something like the-name-of-your-applet@your-name-or-domain-name
+// It must match the uuid on the metadata.json file and the name of the folder of your applet.
 const APPLET_UUID = "cinnamon-applet-template";
+
+// The directory of the applet. In this case is ~/.local/share/cinnamon/applets/cinnamon-applet-template
 const APPLET_DIR = imports.ui.appletManager.appletMeta[APPLET_UUID].path;
 
 function CinnamonAppletTemplate(metadata, orientation, panel_height, instance_id) {
