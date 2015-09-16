@@ -1,5 +1,5 @@
 {
-    "uuid": "cinnamon-applet-template@aldatsa",
+    "uuid": "cinnamon-applet-template",
     "name": "Cinnamon applet template",
     "description": "Cinnamon applet starter template.",
     "max-instances": "-1"

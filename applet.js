@@ -2,7 +2,7 @@
  * /usr/share/cinnamon/js/
  */
 const Applet = imports.ui.applet;
-const APPLET_UUID = "cinnamon-applet-template@aldatsa";
+const APPLET_UUID = "cinnamon-applet-template";
 const APPLET_DIR = imports.ui.appletManager.appletMeta[APPLET_UUID].path;
 
 function CinnamonAppletTemplate(metadata, orientation, panel_height, instance_id) {
