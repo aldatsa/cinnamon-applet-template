@@ -2,7 +2,7 @@
  * /usr/share/cinnamon/js/
  */
 const Applet = imports.ui.applet;
-const APPLET_UUID = "kaixo-cinnamon-applet@aldatsa";
+const APPLET_UUID = "cinnamon-applet-template@aldatsa";
 const APPLET_DIR = imports.ui.appletManager.appletMeta[APPLET_UUID].path;
 
 function KaixoMundua(metadata, orientation, panel_height, instance_id) {

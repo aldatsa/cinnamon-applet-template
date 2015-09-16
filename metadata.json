@@ -1,6 +1,6 @@
 {
-    "uuid": "kaixo-cinnamon-applet@aldatsa",
-    "name": "Kaixo mundua",
-    "description": "Cinnamon-eko applet-ak nola garatu ikasten hasi naiz.",
+    "uuid": "cinnamon-applet-template@aldatsa",
+    "name": "Cinnamon applet template",
+    "description": "Cinnamon applet starter template.",
     "max-instances": "-1"
 }
