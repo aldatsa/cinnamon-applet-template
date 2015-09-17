@@ -1,5 +1,6 @@
 // Import APIs provided by Cinnamon defined in /usr/share/cinnamon/js/
 const Applet = imports.ui.applet;       // /usr/share/cinnamon/js/ui/applet.js
+const Settings = imports.ui.settings;   // /usr/share/cinnamon/js/ui/settings.js
 
 // The UUID (Universally Unique IDentifier) of your applet.
 // Change this constant to something like the-name-of-your-applet@your-name-or-domain-name
@@ -33,7 +34,34 @@ CinnamonAppletTemplate.prototype = {
         // we are telling Cinnamon to translate the string to the correct language,
         // if translations are available.
         this.set_applet_tooltip(_("Hello Cinnamon!"));
+
+        this._bindSettings(metadata, orientation, panel_height, instance_id);
+    },
+
+    _bindSettings: function(metadata, orientation, panel_height, instance_id) {
+
+        // Reference: https://github.com/linuxmint/Cinnamon/wiki/Applet,-Desklet-and-Extension-Settings-Reference
+
+        // Create the settings object
+        this._settings = new Settings.AppletSettings(this, metadata.uuid, instance_id);
+
+        this._settings.bindProperty(Settings.BindingDirection.IN,   // The binding direction - IN means we only listen for changes from this applet
+                         'settings-test-scale',               // The key of the UI control associated with the setting in the "settings-schema.json" file
+                         'settings-test-scale',               // name that is going to be used as the applet property
+                         this.onSettingsChanged,
+                         null
+        );
+    },
+
+    onSettingsChanged: function() {
+
+        // Do you whatever you want in response to the changes made by the user.
+
+        // global.log prints to the file ~/.cinnamon/glass.log. It's useful for debugging.
+        global.log("Settings changed...");
+        global.log("The new value of 'settings-test-scale' is: " + this._settings.getValue('settings-test-scale'));
     }
+
 };
 
 // To load an applet, Cinnamon calls the main function in the applet's code, and
