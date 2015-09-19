@@ -1,6 +1,7 @@
 // Import APIs provided by Cinnamon defined in /usr/share/cinnamon/js/
 const Applet = imports.ui.applet;       // /usr/share/cinnamon/js/ui/applet.js
 const Settings = imports.ui.settings;   // /usr/share/cinnamon/js/ui/settings.js
+const PopupMenu = imports.ui.popupMenu; // /usr/share/cinnamon/js/ui/popupMenu.js
 
 // The UUID (Universally Unique IDentifier) of your applet.
 // Change this constant to something like the-name-of-your-applet@your-name-or-domain-name
@@ -36,6 +37,18 @@ CinnamonAppletTemplate.prototype = {
         this.set_applet_tooltip(_("Hello Cinnamon!"));
 
         this._bindSettings(metadata, orientation, panel_height, instance_id);
+
+        this.menuManager = new PopupMenu.PopupMenuManager(this);
+		this.menu = new Applet.AppletPopupMenu(this, orientation);
+		this.menuManager.addMenu(this.menu);
+
+		this.menu.addAction(_("Menu element 1"), function(event) {
+				global.log("Menu element 1 clicked");
+		});
+
+        this.menu.addAction(_("Menu element 2"), function(event) {
+				global.log("Menu element 2 clicked");
+		});
     },
 
     _bindSettings: function(metadata, orientation, panel_height, instance_id) {
@@ -51,6 +64,10 @@ CinnamonAppletTemplate.prototype = {
                          this.onSettingsChanged,
                          null
         );
+    },
+
+    on_applet_clicked: function(){
+        this.menu.toggle();
     },
 
     onSettingsChanged: function() {
