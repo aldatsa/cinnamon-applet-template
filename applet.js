@@ -11,6 +11,15 @@ const APPLET_UUID = "cinnamon-applet-template";
 // The directory of the applet. In this case is ~/.local/share/cinnamon/applets/cinnamon-applet-template
 const APPLET_DIR = imports.ui.appletManager.appletMeta[APPLET_UUID].path;
 
+const GLib = imports.gi.GLib;
+const Gettext = imports.gettext;
+
+Gettext.bindtextdomain(APPLET_UUID, GLib.get_home_dir() + "/.local/share/locale");
+
+function _(str){
+  return Gettext.dgettext(APPLET_UUID, str);
+}
+
 // The constructor of our applet.
 function CinnamonAppletTemplate(metadata, orientation, panel_height, instance_id) {
     this._init(metadata, orientation, panel_height, instance_id);

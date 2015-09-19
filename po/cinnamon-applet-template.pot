@@ -1,0 +1,43 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-19 21:43+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
+
+#: applet.js:40
+msgid "Hello Cinnamon!"
+msgstr ""
+
+#: applet.js:48
+msgid "Menu element 1"
+msgstr ""
+
+#: applet.js:52
+msgid "Menu element 2"
+msgstr ""
+
+#. cinnamon-applet-template->settings-schema.json->settings-test-
+#. scale->description
+msgid "Scale test"
+msgstr ""
+
+#. cinnamon-applet-template->metadata.json->description
+msgid "Cinnamon applet starter template."
+msgstr ""
+
+#. cinnamon-applet-template->metadata.json->name
+msgid "Cinnamon applet template"
+msgstr ""
