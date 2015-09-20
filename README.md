@@ -30,3 +30,7 @@ Then, move it to the corresponding folder, in our example: ~/.local/share/locale
     mv cinnamon-applet-template.mo ~/.local/share/locale/eu/LC_MESSAGES/
 
 It may be necessary to restart Cinnamon for the translations to take effect.
+
+##License
+
+cinnamon-applet-template is free software/open source, and is distributed under the GNU General Public License (GPL) version 3 license.
