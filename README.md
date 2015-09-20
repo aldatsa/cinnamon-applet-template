@@ -6,22 +6,29 @@ WORK IN PROGRESS
 # How to start your own applet from this template
 
 1. Go to applets folder
-    cd ~/.local/share/cinnamon/applets
 
+    ```bash
+    cd ~/.local/share/cinnamon/applets
+    ```
 2. Clone this project
 
+    ```bash
     git clone https://github.com/aldatsa/cinnamon-applet-template.git
+    ```
 
 3. Change the name of the folder from cinnamon-applet-template to something like the-name-of-your-applet@your-name-or-domain-name
 
 4. Change the uuid property  in the metadata.json file to match the name that you gave the folder of your applet in the previous step.
 
+    ```json
     "uuid": "cinnamon-applet-template",
+    ```
 
 5. Change the APPLET_UUID constant in the applet.js file as well.
 
+    ```javascript
     const APPLET_UUID = "cinnamon-applet-template";
-
+    ```
 6. Create something cool.
 
 7. Upload your applet to http://cinnamon-spices.linuxmint.com/applets for others to enjoy.
@@ -32,7 +39,9 @@ Use cinnamon-json-makepot (https://github.com/linuxmint/Cinnamon/blob/master/fil
 
 Example
 
+    ```bash
     cinnamon-json-makepot --js cinnamon-applet-template.pot
+    ```
 
 ## How to create a po file from the pot file
 
@@ -40,17 +49,23 @@ Use msginit (https://www.gnu.org/software/gettext/manual/html_node/msginit-Invoc
 
 Example
 
+    ```bash
     msginit --locale=eu --input=cinnamon-applet-template.pot
+    ```
 
 ## How to test a translation
 
 First generate a mo file, for example:
 
+    ```bash
     msgfmt eu.po --output-file cinnamon-applet-template.mo
+    ```
 
 Then, move it to the corresponding folder, in our example: ~/.local/share/locale/eu/LC_MESSAGES/
 
+    ```bash
     mv cinnamon-applet-template.mo ~/.local/share/locale/eu/LC_MESSAGES/
+    ```
 
 It may be necessary to restart Cinnamon for the translations to take effect.
 
