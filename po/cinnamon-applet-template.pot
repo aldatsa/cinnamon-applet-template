@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-19 21:43+0200\n"
+"POT-Creation-Date: 2015-09-20 20:14+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,16 +17,32 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: \n"
 
-#: applet.js:40
+#: applet.js:46
 msgid "Hello Cinnamon!"
 msgstr ""
 
-#: applet.js:48
+#: applet.js:54
 msgid "Menu element 1"
 msgstr ""
 
-#: applet.js:52
+#: applet.js:55
+msgid "Menu element 1 clicked"
+msgstr ""
+
+#: applet.js:58
 msgid "Menu element 2"
+msgstr ""
+
+#: applet.js:59
+msgid "Menu element 2 clicked"
+msgstr ""
+
+#: applet.js:87
+msgid "Settings changed..."
+msgstr ""
+
+#: applet.js:88
+msgid "The new value of 'settings-test-scale' is: "
 msgstr ""
 
 #. cinnamon-applet-template->settings-schema.json->settings-test-

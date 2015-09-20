@@ -52,11 +52,11 @@ CinnamonAppletTemplate.prototype = {
 		this.menuManager.addMenu(this.menu);
 
 		this.menu.addAction(_("Menu element 1"), function(event) {
-				global.log("Menu element 1 clicked");
+				global.log(_("Menu element 1 clicked"));
 		});
 
         this.menu.addAction(_("Menu element 2"), function(event) {
-				global.log("Menu element 2 clicked");
+				global.log(_("Menu element 2 clicked"));
 		});
     },
 
@@ -84,8 +84,8 @@ CinnamonAppletTemplate.prototype = {
         // Do you whatever you want in response to the changes made by the user.
 
         // global.log prints to the file ~/.cinnamon/glass.log. It's useful for debugging.
-        global.log("Settings changed...");
-        global.log("The new value of 'settings-test-scale' is: " + this._settings.getValue('settings-test-scale'));
+        global.log(_("Settings changed..."));
+        global.log(_("The new value of 'settings-test-scale' is: " + this._settings.getValue('settings-test-scale')));
     }
 
 };

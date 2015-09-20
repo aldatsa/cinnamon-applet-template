@@ -1,14 +1,15 @@
 # Basque translations for PACKAGE package.
 # Copyright (C) 2015 THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# Asier <asier.iturralde@gmail.com>, 2015.
 # Asier Iturralde Sarasola <asier.iturralde@gmail.com>, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-19 21:43+0200\n"
-"PO-Revision-Date: 2015-09-19 22:15+0200\n"
+"POT-Creation-Date: 2015-09-20 20:14+0200\n"
+"PO-Revision-Date: 2015-09-20 20:19+0200\n"
 "Last-Translator: Asier Iturralde Sarasola <asier.iturralde@gmail.com>\n"
 "Language-Team: Euskara <librezale@librezale.eus>\n"
 "MIME-Version: 1.0\n"
@@ -18,17 +19,33 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Gtranslator 2.91.6\n"
 
-#: applet.js:40
+#: applet.js:46
 msgid "Hello Cinnamon!"
 msgstr "Kaixo Cinnamon!"
 
-#: applet.js:48
+#: applet.js:54
 msgid "Menu element 1"
 msgstr "Menuko elementua 1"
 
-#: applet.js:52
+#: applet.js:55
+msgid "Menu element 1 clicked"
+msgstr "Menuko elementua 1 klikatuta"
+
+#: applet.js:58
 msgid "Menu element 2"
 msgstr "Menuko elementua 2"
+
+#: applet.js:59
+msgid "Menu element 2 clicked"
+msgstr "Menuko elementua 2 klikatuta"
+
+#: applet.js:87
+msgid "Settings changed..."
+msgstr "Ezarpenak aldatu dira..."
+
+#: applet.js:88
+msgid "The new value of 'settings-test-scale' is: "
+msgstr "'settings-test-scale'ren balio berria hau da:"
 
 #. cinnamon-applet-template->settings-schema.json->settings-test-
 #. scale->description
