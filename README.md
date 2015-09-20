@@ -3,6 +3,29 @@ A basic starter template for Cinnamon Applets.
 
 WORK IN PROGRESS
 
+# How to start your own applet from this template
+
+1. Go to applets folder
+    cd ~/.local/share/cinnamon/applets
+
+2. Clone this project
+
+    git clone https://github.com/aldatsa/cinnamon-applet-template.git
+
+3. Change the name of the folder from cinnamon-applet-template to something like the-name-of-your-applet@your-name-or-domain-name
+
+4. Change the uuid property  in the metadata.json file to match the name that you gave the folder of your applet in the previous step.
+
+    "uuid": "cinnamon-applet-template",
+
+5. Change the APPLET_UUID constant in the applet.js file as well.
+
+    const APPLET_UUID = "cinnamon-applet-template";
+
+6. Create something cool.
+
+7. Upload your applet to http://cinnamon-spices.linuxmint.com/applets for others to enjoy.
+
 ## How to create a pot file
 
 Use cinnamon-json-makepot (https://github.com/linuxmint/Cinnamon/blob/master/files/usr/lib/cinnamon-json-makepot/cinnamon-json-makepot.py)
