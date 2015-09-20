@@ -16,8 +16,9 @@ const Gettext = imports.gettext;
 
 Gettext.bindtextdomain(APPLET_UUID, GLib.get_home_dir() + "/.local/share/locale");
 
+// Used to translate strings into different languages
 function _(str){
-  return Gettext.dgettext(APPLET_UUID, str);
+    return Gettext.dgettext(APPLET_UUID, str);
 }
 
 // The constructor of our applet.
@@ -47,14 +48,18 @@ CinnamonAppletTemplate.prototype = {
 
         this._bindSettings(metadata, orientation, panel_height, instance_id);
 
+        // Create a popup menu
         this.menuManager = new PopupMenu.PopupMenuManager(this);
 		this.menu = new Applet.AppletPopupMenu(this, orientation);
 		this.menuManager.addMenu(this.menu);
 
+        // Add a menu element
+        // First argument is the text of the menu element, the second a callback function to execute when the element is clicked.
 		this.menu.addAction(_("Menu element 1"), function(event) {
 				global.log(_("Menu element 1 clicked"));
 		});
 
+        // Add another menu element
         this.menu.addAction(_("Menu element 2"), function(event) {
 				global.log(_("Menu element 2 clicked"));
 		});
@@ -65,17 +70,21 @@ CinnamonAppletTemplate.prototype = {
         // Reference: https://github.com/linuxmint/Cinnamon/wiki/Applet,-Desklet-and-Extension-Settings-Reference
 
         // Create the settings object
+        // In this case we use another way to get the uuid, the metadata object.
         this._settings = new Settings.AppletSettings(this, metadata.uuid, instance_id);
 
-        this._settings.bindProperty(Settings.BindingDirection.IN,   // The binding direction - IN means we only listen for changes from this applet
-                         'settings-test-scale',               // The key of the UI control associated with the setting in the "settings-schema.json" file
-                         'settings-test-scale',               // name that is going to be used as the applet property
-                         this.onSettingsChanged,
-                         null
+        // Tell the settings provider we want to bind one of our settings keys to an applet property.
+        this._settings.bindProperty(Settings.BindingDirection.IN,   // The binding direction - IN means we only listen for changes from this applet.
+                         'settings-test-scale',                     // The key of the UI control associated with the setting in the "settings-schema.json" file.
+                         'settings-test-scale',                     // Name that is going to be used as the applet property.
+                         this.onSettingsChanged,                    // Method to be called when the setting value changes.
+                         null                                       // Optional - it can be left off entirely, or used to pass any extra object to the callback if desired.
         );
     },
 
-    on_applet_clicked: function(){
+    on_applet_clicked: function() {
+
+        // Show/Hide the menu.
         this.menu.toggle();
     },
 
