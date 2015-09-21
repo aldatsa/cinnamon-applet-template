@@ -3,6 +3,8 @@ const Applet = imports.ui.applet;       // /usr/share/cinnamon/js/ui/applet.js
 const Settings = imports.ui.settings;   // /usr/share/cinnamon/js/ui/settings.js
 const PopupMenu = imports.ui.popupMenu; // /usr/share/cinnamon/js/ui/popupMenu.js
 
+const Lang = imports.lang;
+
 // The UUID (Universally Unique IDentifier) of your applet.
 // Change this constant to something like the-name-of-your-applet@your-name-or-domain-name
 // It must match the uuid on the metadata.json file and the name of the folder of your applet.
@@ -63,6 +65,13 @@ CinnamonAppletTemplate.prototype = {
         this.menu.addAction(_("Menu element 2"), function(event) {
 				global.log(_("Menu element 2 clicked"));
 		});
+
+        // Create and add a switch to the context menu.
+        this.context_menu_switch_test = new PopupMenu.PopupSwitchMenuItem(_("Context menu switch test"), false);
+        this._applet_context_menu.addMenuItem(this.context_menu_switch_test);
+
+        // Connect the toggle event of the switch to its callback.
+        this.context_menu_switch_test.connect('toggled', Lang.bind(this, this.on_toggle_context_menu_switch_test));
     },
 
     _bindSettings: function(metadata, orientation, panel_height, instance_id) {
@@ -80,6 +89,12 @@ CinnamonAppletTemplate.prototype = {
                          this.onSettingsChanged,                    // Method to be called when the setting value changes.
                          null                                       // Optional - it can be left off entirely, or used to pass any extra object to the callback if desired.
         );
+    },
+
+    on_toggle_context_menu_switch_test: function() {
+
+        global.log(_("Context menu switch test toggled"));
+
     },
 
     on_applet_clicked: function() {
