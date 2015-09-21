@@ -53,6 +53,16 @@ Example
 msginit --locale=eu --input=cinnamon-applet-template.pot
 ```
 
+## How to update a existing po file from the pot file
+
+Use msgmerge (https://www.gnu.org/software/gettext/manual/html_node/msgmerge-Invocation.html)
+
+Example
+
+```bash
+msgmerge --update eu.po cinnamon-applet-template.pot
+```
+
 ## How to test a translation
 
 First generate a mo file, for example:
