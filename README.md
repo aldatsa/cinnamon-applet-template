@@ -65,7 +65,7 @@ msgmerge --update eu.po cinnamon-applet-template.pot
 
 ## How to test a translation
 
-First generate a mo file, for example:
+First generate a mo file using msgfmt (https://www.gnu.org/software/gettext/manual/html_node/msgfmt-Invocation.html), for example:
 
 ```bash
 msgfmt eu.po --output-file cinnamon-applet-template.mo
