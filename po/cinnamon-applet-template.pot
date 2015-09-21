@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-20 20:14+0200\n"
+"POT-Creation-Date: 2015-09-21 23:27+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,31 +17,39 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: \n"
 
-#: applet.js:46
+#: applet.js:49
 msgid "Hello Cinnamon!"
 msgstr ""
 
-#: applet.js:54
+#: applet.js:60
 msgid "Menu element 1"
 msgstr ""
 
-#: applet.js:55
+#: applet.js:61
 msgid "Menu element 1 clicked"
 msgstr ""
 
-#: applet.js:58
+#: applet.js:65
 msgid "Menu element 2"
 msgstr ""
 
-#: applet.js:59
+#: applet.js:66
 msgid "Menu element 2 clicked"
 msgstr ""
 
-#: applet.js:87
+#: applet.js:70
+msgid "Context menu switch test"
+msgstr ""
+
+#: applet.js:96
+msgid "Context menu switch test toggled"
+msgstr ""
+
+#: applet.js:111
 msgid "Settings changed..."
 msgstr ""
 
-#: applet.js:88
+#: applet.js:112
 msgid "The new value of 'settings-test-scale' is: "
 msgstr ""
 
